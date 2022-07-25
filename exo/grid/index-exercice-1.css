@@ -1,0 +1,61 @@
+body{ 
+    height: 100vh;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-auto-rows: 20% 70% 8%;
+    grid-template-areas: 
+        "logo nav nav"
+        "content content feat"
+        "footer footer footer"
+}
+.one {
+    grid-area: logo;
+    background-color: brown;
+}
+.two {
+    grid-area: nav;
+    background-color: blue;
+}
+.three {
+    grid-area: content;
+    background-color: white;
+}
+.four {
+    grid-area: feat;
+    background-color: aquamarine;
+}
+.five {
+    grid-area: footer;
+    background-color: black;
+    color: white;
+}
+
+@media (max-width: 600px){
+    .wrapper{
+        display:grid;
+        grid-template-columns: 100%;
+        grid-template-rows:20% 20% 20% 20% 20%;
+    }
+    .one{
+       grid-row: 1;
+       grid-column: 1;
+    }
+    .two{
+        grid-row:2;
+        grid-column: 1;
+    }
+    .three{
+        grid-row: 3;
+        grid-column: 1;
+    }
+    .four{
+        grid-row: 4;
+        grid-column: 1;
+    }
+    .five{
+        grid-row: 5;
+        grid-column: 1;
+    }
+}
